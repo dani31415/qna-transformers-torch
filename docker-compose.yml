@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  pt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./py:/vol
+      - ./.cache:/root/.cache/huggingface/transformers
+      - ./.cache:/root/.cache/torch/transformers
